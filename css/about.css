@@ -1,0 +1,331 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive; /* Cursive font */
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #000000;
+    margin: 0; /* Remove margin */
+    padding-bottom: 10px; /* Padding for spacing */
+	padding-left: 100px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, rgba(204, 191, 189, 1) 0%, rgba(204, 191, 189, 0) 100%);
+}
+
+.navbar-left img.logo {
+  height: 50px;
+}
+
+.navbar-center .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-center .nav-links li {
+  position: relative;
+}
+
+.navbar-center .nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+.navbar-center .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 500;
+}
+
+.navbar-center .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.navbar-center .nav-links li a:hover {
+  color: #DBB658;
+}
+
+.navbar-center .dropdown-menu li a {
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+.book-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #DBB658;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-btn:hover {
+    background-color: #caa449;
+    transform: scale(1.05);
+}
+
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 980px; /* Adjust height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the entire section */
+    z-index: 1;
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.banner-title {
+  position: relative;
+  z-index: 2;
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.banner-overlay h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner-overlay p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* History Section */
+.history-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: #fff;
+}
+
+.history-container {
+    display: flex;
+    gap: 20px; /* Space between video and card */
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.history-video {
+    flex: 1; /* Adjusts the width proportionally */
+    max-width: 300px; /* Smaller video size */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history-card {
+    flex: 5; /* Takes more space than the video */
+    background: #f2f2f2;
+    padding: 20px;
+	height: 530px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+}
+
+.history-card h2 {
+    color: #b5735a;
+    margin-bottom: 10px;
+}
+
+.history-card p {
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Banner Section */
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the background */
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: darken the overlay for better text/logo visibility */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.banner-overlay h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+/* Reverse card layout for sections like Alia Bastamam */
+/* Reverse card layout for sections like Alia Bastamam */
+
+/* Card Section */
+.card-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 1200px;
+ 
+}
+
+.card-image {
+    width: 40%;
+    object-fit: cover;
+    height: 500px;
+}
+
+.card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+	font-size: 1.3rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.card-content-2 {
+    padding: 20px;
+    flex: 1;
+	font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+.card-content h2 {
+    color: #b5735a;
+    margin-bottom: 10px;
+}
+
+.card-content-2 h2 {
+    color: #b5735a;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.card-content-2 p {
+    color: #333;
+    line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #CCBFBD;
+  color: #333;
+}
+

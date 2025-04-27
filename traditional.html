@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Attire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+  <header>
+    <nav class="navbar">
+        <div class="logo">The Wedding Favour</div>
+        <div class="navbar-center">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="attire.html">Wedding Attire</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="traditional.html">Traditional Dress</a></li>
+                        <li><a href="modern.html">Modern Dress</a></li>
+                    </ul>
+                </li>
+                <li><a href="card.html">Invitation Card</a></li>
+				<li class="dropdown">
+                        <a href="venue.html">Venue</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boathouse.html">Boathouse By The Lake</a></li>
+                            <li><a href="forest-valley.html">Forest Valley Hall</a></li>
+                            <li><a href="glasshouse.html">Glasshouse At Seputeh</a></li>
+                            <li><a href="estate.html">The Estate On Federal Hill</a></li>
+                            <li><a href="luna-grand.html">The Luna Grand Ballroom</a></li>
+                            <li><a href="seavoy.html">The Seavoy House</a></li>
+                        </ul>
+                    </li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+			<a href="book.html" class="book-btn">Book Session</a>
+		</div>
+    </nav>
+  </header>
+
+    <!-- Main Content -->
+    <main>
+		
+        <!-- Section 1: Introduction -->
+        <section class="intro-section">
+			<div class="decorative-line"></div>
+            <h2>Traditional Attire</h2>
+            <p>Explore the elegance and timeless beauty of traditional wedding attire, celebrating cultural heritage and style.</p>
+        </section>
+
+        <!-- Section 2: Image Slider -->
+        <section class="slider-section">
+            <div class="slider-container">
+                <!-- Image Slides -->
+                <div class="slides">
+                    <div class="slide"><img src="images/traditional1.jpg" alt="Traditional Dress 1"></div>
+                    <div class="slide"><img src="images/traditional2.jpg" alt="Traditional Dress 2"></div>
+                    <div class="slide"><img src="images/traditional3.jpg" alt="Traditional Dress 3"></div>
+                    <div class="slide"><img src="images/traditional4.jpg" alt="Traditional Dress 4"></div>
+                    <div class="slide"><img src="images/traditional5.jpg" alt="Traditional Dress 5"></div>
+                    <div class="slide"><img src="images/traditional6.jpg" alt="Traditional Dress 6"></div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <!-- Section 3: Navigation to Modern Attire -->
+        <section class="navigation-section">
+			<a href="modern.html" class="nav-arrow right">Modern Attire &#10132;</a>
+		</section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TheWeddingFavour. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slider -->
+    <script>
+	let currentIndex = 0;
+		const slidesToShow = 3;
+
+		function showSlides(index) {
+			const slides = document.querySelector('.slides');
+			const slideCount = document.querySelectorAll('.slide').length;
+			const maxIndex = slideCount - slidesToShow;
+
+			if (index > maxIndex) currentIndex = 0; // Loop back to the start
+			else if (index < 0) currentIndex = maxIndex; // Loop to the end
+			else currentIndex = index;
+
+			const offset = currentIndex * (100 / slidesToShow);
+			slides.style.transform = `translateX(-${offset}%)`;
+		}
+
+		function plusSlides(n) {
+			showSlides(currentIndex + n);
+		}
+
+		window.onload = function() {
+			showSlides(currentIndex);
+		};
+			window.onload = function() {
+			// Check if previous page exists in history (i.e., if it's not the first page the user is visiting)
+			const previousButton = document.getElementById('previous-button');
+			if (document.referrer === "") {
+				// No referrer means there's no previous page, so hide the left button
+				previousButton.style.display = "none";
+			}
+		};
+
+	</script>
+</body>
+
+</html>

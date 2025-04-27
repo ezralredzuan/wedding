@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/card.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="logo">The Wedding Favour</div>
+        <div class="navbar-center">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="attire.html">Wedding Attire</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="traditional.html">Traditional Dress</a></li>
+                        <li><a href="modern.html">Modern Dress</a></li>
+                    </ul>
+                </li>
+                <li><a href="card.html">Invitation Card</a></li>
+				<li class="dropdown">
+                        <a href="venue.html">Venue</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boathouse.html">Boathouse By The Lake</a></li>
+                            <li><a href="forest-valley.html">Forest Valley Hall</a></li>
+                            <li><a href="glasshouse.html">Glasshouse At Seputeh</a></li>
+                            <li><a href="estate.html">The Estate On Federal Hill</a></li>
+                            <li><a href="luna-grand.html">The Luna Grand Ballroom</a></li>
+                            <li><a href="seavoy.html">The Seavoy House</a></li>
+                        </ul>
+                    </li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+			<a href="book.html" class="book-btn">Book Session</a>
+		</div>
+    </nav>
+  </header>
+
+    <!-- Section 1: Banner -->
+    <section class="banner">
+    <img src="images/card.jpg" alt="Invitation Card Banner" class="banner-image">
+    <div class="banner-content">
+        <h1>Invitation Card</h1>
+    </div>
+</section>
+
+	<div class="banner-title">
+      <br><p>The Design Of Our Invitation Card</p>
+    </div>
+    <!-- Section 2: Catalog -->
+    <section class="catalog">
+        <div class="card-row">
+            <div class="card-item" data-detail="Card 1 Details">
+                <img src="images/card1.jpg" alt="Card 1">
+            </div>
+            <div class="card-item" data-detail="Card 2 Details">
+                <img src="images/card2.jpg" alt="Card 2">
+            </div>
+            <div class="card-item" data-detail="Card 3 Details">
+                <img src="images/card3.jpg" alt="Card 3">
+            </div>
+            <div class="card-item" data-detail="Card 4 Details">
+                <img src="images/card4.jpg" alt="Card 4">
+            </div>
+			<div class="card-item" data-detail="Card 5 Details">
+                <img src="images/card5.JPG" alt="Card 5">
+            </div>
+            <div class="card-item"  data-detail="Card 6 Details">
+                <img style="height: 250px;" src="images/card6.JPG" alt="Card 6">
+            </div>
+        </div>
+    </section>
+	<div class="card-content">
+       <h2>Please Click On The Design That You Want</h2><br><br>
+    </div>
+
+   
+    <div id="popup-modal" class="popup-modal">
+		<div class="modal-content">
+			<span class="close-button">&times;</span>
+			<img src="images/card-placeholder.jpg" alt="Selected Card" id="popup-image">
+			<h2 id="popup-title">Card Name</h2>
+			<p id="popup-description">Card details go here...</p>
+		</div>
+	</div>
+
+    <footer>
+        <p>&copy; 2024 TheWeddingFavour. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+	// Select necessary elements
+		const modal = document.getElementById('popup-modal');
+		const modalImage = document.getElementById('popup-image');
+		const modalTitle = document.getElementById('popup-title');
+		const modalDescription = document.getElementById('popup-description');
+		const closeButton = document.querySelector('.close-button');
+
+		// Function to show the modal
+		function showModal(imageSrc, title, description) {
+			modalImage.src = imageSrc;
+			modalTitle.textContent = title;
+			modalDescription.textContent = description;
+			modal.style.display = 'flex'; // Show the modal
+		}
+
+		// Close modal when clicking outside the content or on the close button
+		function closeModal() {
+			modal.style.display = 'none';
+		}
+
+		// Event listener for card click
+		document.querySelectorAll('.card-item').forEach(card => {
+			card.addEventListener('click', function () {
+				const imageSrc = this.querySelector('img').src;
+				const title = this.getAttribute('data-detail');
+				const description = `This is a detailed description of ${title}`; // Example description
+				showModal(imageSrc, title, description);
+			});
+		});
+
+		// Event listeners to close the modal
+		closeButton.addEventListener('click', closeModal);
+		modal.addEventListener('click', function (e) {
+			if (e.target === modal) {
+				closeModal();
+			}
+		});
+	</script>
+</body>
+</html>

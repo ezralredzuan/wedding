@@ -1,0 +1,238 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive; /* Cursive font */
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #000000;
+    margin: 0; /* Remove margin */
+    padding-bottom: 10px; /* Padding for spacing */
+	padding-left: 100px;
+}
+
+.book-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #DBB658;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-btn:hover {
+    background-color: #caa449;
+    transform: scale(1.05);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, rgba(204, 191, 189, 1) 0%, rgba(204, 191, 189, 0) 100%);
+}
+
+.navbar-left img.logo {
+  height: 50px;
+}
+
+.navbar-center .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-center .nav-links li {
+  position: relative;
+}
+
+.navbar-center .nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+.navbar-center .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 500;
+}
+
+.navbar-center .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.navbar-center .nav-links li a:hover {
+  color: #DBB658;
+}
+
+.navbar-center .dropdown-menu li a {
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-right .social-btn {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #DBB658;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-right .social-btn.facebook {
+  background-image: url('facebook-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navbar-right .social-btn.instagram {
+  background-image: url('instagram-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navbar-right .social-btn.twitter {
+  background-image: url('twitter-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Banner Section */
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Card Section */
+.card-section {
+    padding: 90px;
+	padding-left: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #CCBFBD;
+  color: #333;
+}
+
